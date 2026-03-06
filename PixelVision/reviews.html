@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Vision | Reviews</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style2.css" />
+
+    <style>
+      .reviews-page-section {
+        padding: 180px 60px 100px 60px;
+        min-height: 100vh;
+        background-color: #050505;
+      }
+      .reviews-page-title {
+        text-align: center;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(3rem, 8vw, 6rem);
+        margin-bottom: 80px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.1;
+        letter-spacing: -2px;
+      }
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .reviews-grid .review-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 40px;
+        transition: transform 0.3s;
+      }
+      .reviews-grid .review-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+      @media (max-width: 768px) {
+        .reviews-page-section {
+          padding: 120px 20px 60px 20px;
+        }
+        .reviews-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fixed Global Header -->
+    <header class="header">
+      <a href="index2.html" class="logo" style="text-decoration: none"
+        >PORTFOLIO</a
+      >
+      <button class="menu-btn" onclick="window.history.back()">Back</button>
+    </header>
+
+    <section class="reviews-page-section">
+      <h1 class="dm-sans-heading reviews-page-title">Reviews</h1>
+
+      <div class="reviews-grid">
+        <!-- Review Cards -->
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "He provided exceptional product photography services for our latest
+            collection. Their attention to detail and creative approach resulted
+            in images that perfectly showcased our products. Highly
+            recommended!"
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">G. Monroe</h4>
+            <p class="author-role">Marketing Manager</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "It was a fantastic experience! They brought a level of
+            professionalism and creativity to our product photography that truly
+            set our brand apart. We look forward to working with them again in
+            the future!"
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Michael</h4>
+            <p class="author-role">MD, Stellar Designs</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "We are thrilled with the product photography provided by James.
+            They captured our products beautifully, highlighting their unique
+            features and enhancing their appeal."
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Michael T.</h4>
+            <p class="author-role">Marketing Manager</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "Thanks you, our product images have never looked better! They have
+            a keen eye for detail and a talent for capturing our products in the
+            best possible light. We couldn't be happier with the results!"
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Aurora Jensen</h4>
+            <p class="author-role">Marketing Director</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "Fennegan's photography skills are unmatched! He captured our
+            product launch event with such creativity and attention to detail.
+            The photos were stunning, and we couldn't be happier. Highly
+            recommend!"
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Calliope</h4>
+            <p class="author-role">Marketing Manager</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "Working with Fennegan was a fantastic experience. His ability to
+            capture the essence of our travel adventures was truly impressive.
+            The images are not just pictures; they're memories we'll cherish
+            forever."
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Octavian</h4>
+            <p class="author-role">Marketing Director</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "Fennegan's talent is truly exceptional. He captured the serene
+            beauty of our resort perfectly, making each photo feel like a dream.
+            His work has significantly boosted our marketing efforts."
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Isolde</h4>
+            <p class="author-role">Marketing Director</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-avatar-wrap">
+            <span class="crosshair top-left"></span>
+            <span class="crosshair top-right"></span>
+            <span class="crosshair bottom-left"></span>
+            <span class="crosshair bottom-right"></span>
+            <img
+              src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=100&q=80"
+              alt="Client"
+            />
+          </div>
+          <p class="review-text">
+            "Fennegan is an absolute delight to work with. His patience and
+            creativity shone through in every shot of our botanical collection.
+            The photos are breathtaking and have helped elevate our brand's
+            visual appeal."
+          </p>
+          <div class="review-author">
+            <h4 class="author-name">Michael T.</h4>
+            <p class="author-role">Marketing Manager</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-contact">
+          <div class="lets-talk">Ready to start?</div>
+          <a href="mailto:hello@pixelvision.com" class="email"
+            >hello@pixelvision.com</a
+          >
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <a href="index2.html">Home</a>
+            <a href="index2.html#services">Services</a>
+            <a href="index2.html#expertise">Expertise</a>
+          </div>
+          <div class="footer-nav-col">
+            <a href="reviews.html">Reviews</a>
+            <a href="index2.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <h1 class="footer-brand">Pixel Vision</h1>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 PIXEL VISION. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button
+      id="scrollTopBtn"
+      class="scroll-top-btn"
+      aria-label="Scroll to top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add("visible");
+        } else {
+          scrollTopBtn.classList.remove("visible");
+        }
+      });
+    </script>
+  </body>
+</html>

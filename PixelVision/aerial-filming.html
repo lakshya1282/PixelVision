@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aerial Filming | Pixel Vision</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="service-styles.css" />
+  </head>
+  <body style="position: relative">
+    <header
+      class="header"
+      style="
+        pointer-events: auto;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        box-sizing: border-box;
+      "
+    >
+      <div class="logo">
+        <a href="index2.html" style="color: white; text-decoration: none"
+          >PORTFOLIO</a
+        >
+      </div>
+      <button
+        class="menu-btn"
+        onclick="window.location.href = 'index2.html'"
+        style="position: static; margin-top: -10px"
+      >
+        Back
+      </button>
+    </header>
+
+    <div class="cursor-view">
+      <span></span><span></span><span></span><span></span>
+      <div class="cursor-text">VIEW</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="corner-brackets">
+        <div class="bracket tl"></div>
+        <div class="bracket tr"></div>
+        <div class="bracket bl"></div>
+        <div class="bracket br"></div>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80"
+        alt="Aerial Filming Hero"
+        class="hero-image"
+      />
+
+      <div class="hero-bottom-info">
+        <div class="tags">
+          <span class="tag">DRONE</span>
+          <span class="tag">SKY</span>
+        </div>
+        <div class="title-row">
+          <h1 class="hero-title">Aerial Filming</h1>
+          <div class="arrow-icon">↗</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themed Description Section -->
+    <section class="service-description">
+      <p>
+        Take your perspective to the skies. With top-tier drone technology, I
+        capture breathtaking aerial footage that adds a sweeping, cinematic
+        scale to any commercial or editorial endeavor.
+      </p>
+    </section>
+
+    <!-- Albums Section -->
+    <section class="service-albums">
+      <h2 class="bg-text">Albums</h2>
+      <div class="albums-scroll">
+        <div class="album-card">
+          <div class="album-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=800&q=60"
+              alt="Album 1"
+            />
+          </div>
+          <div class="tags">
+            <span class="tag">HIGHLIGHT</span>
+            <span class="tag">COMMERCIAL</span>
+          </div>
+          <div class="title-row">
+            <h3>Wings of Freedom</h3>
+            <div class="arrow-icon">↗</div>
+          </div>
+        </div>
+        <div class="album-card">
+          <div class="album-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=800&q=50"
+              alt="Album 2"
+              style="filter: hue-rotate(45deg)"
+            />
+          </div>
+          <div class="tags">
+            <span class="tag">PASSION PROJECT</span>
+            <span class="tag">CONCEPT</span>
+          </div>
+          <div class="title-row">
+            <h3>Above the Clouds</h3>
+            <div class="arrow-icon">↗</div>
+          </div>
+        </div>
+        <div class="album-card">
+          <div class="album-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=800&q=40"
+              alt="Album 3"
+              style="filter: saturate(0.5)"
+            />
+          </div>
+          <div class="tags">
+            <span class="tag">EDITORIAL</span>
+            <span class="tag">STUDIO</span>
+          </div>
+          <div class="title-row">
+            <h3>Beyond Imagination</h3>
+            <div class="arrow-icon">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Posts Section -->
+    <section class="service-insta">
+      <h2
+        class="dm-sans-heading"
+        style="
+          margin-bottom: 40px;
+          text-align: center;
+          font-size: clamp(2rem, 4vw, 3rem);
+          color: white;
+        "
+      >
+        INSTAGRAM POSTS
+      </h2>
+      <div class="insta-grid">
+        <div
+          class="insta-post"
+          onclick="openInstaModal(this.querySelector('img').src)"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=500&q=70"
+            alt="Insta 1"
+          />
+          <div class="insta-overlay">
+            <p>Creating magic. #aerialfilming</p>
+          </div>
+        </div>
+        <div
+          class="insta-post"
+          onclick="openInstaModal(this.querySelector('img').src)"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=500&q=70"
+            alt="Insta 2"
+            style="transform: scaleX(-1)"
+          />
+          <div class="insta-overlay">
+            <p>Behind the scenes. #pixelvision</p>
+          </div>
+        </div>
+        <div
+          class="insta-post"
+          onclick="openInstaModal(this.querySelector('img').src)"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=500&q=70"
+            alt="Insta 3"
+            style="filter: contrast(1.2)"
+          />
+          <div class="insta-overlay">
+            <p>Details matter. #art</p>
+          </div>
+        </div>
+        <div
+          class="insta-post"
+          onclick="openInstaModal(this.querySelector('img').src)"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600125792973-100227bbabb6?w=1600&q=80&w=500&q=70"
+            alt="Insta 4"
+            style="filter: brightness(0.8)"
+          />
+          <div class="insta-overlay">
+            <p>Final results from today's shoot. #studio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const cursor = document.querySelector(".cursor-view");
+      const heroImg = document.querySelector(".hero-image");
+      const albumCards = document.querySelectorAll(".album-card");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      heroImg.addEventListener("mouseenter", () =>
+        cursor.classList.add("active"),
+      );
+      heroImg.addEventListener("mouseleave", () =>
+        cursor.classList.remove("active"),
+      );
+
+      albumCards.forEach((card) => {
+        card.addEventListener("mouseenter", () =>
+          cursor.classList.add("active"),
+        );
+        card.addEventListener("mouseleave", () =>
+          cursor.classList.remove("active"),
+        );
+      });
+
+      // Horizontal scrolling with mouse wheel in albums section
+      const albumsScroll = document.querySelector(".albums-scroll");
+      albumsScroll.addEventListener("wheel", (e) => {
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          albumsScroll.scrollLeft += e.deltaY;
+        }
+      });
+    </script>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-contact">
+          <div class="lets-talk">Ready to start?</div>
+          <a href="mailto:hello@pixelvision.com" class="email"
+            >hello@pixelvision.com</a
+          >
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <a href="index2.html">Home</a>
+            <a href="index2.html#services">Services</a>
+            <a href="index2.html#expertise">Expertise</a>
+          </div>
+          <div class="footer-nav-col">
+            <a href="reviews.html">Reviews</a>
+            <a href="index2.html#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <h1 class="footer-brand">Pixel Vision</h1>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 PIXEL VISION. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- Instagram Lightbox Modal -->
+    <div
+      class="insta-lightbox"
+      id="instaLightbox"
+      onclick="if (event.target === this) closeInstaModal();"
+    >
+      <button class="lightbox-close" onclick="closeInstaModal()">✕</button>
+      <img id="lightboxImage" src="" alt="Zoomed Post" />
+    </div>
+
+    <script>
+      function openInstaModal(src) {
+        const lightbox = document.getElementById("instaLightbox");
+        const lightboxImg = document.getElementById("lightboxImage");
+        lightboxImg.src = src;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      // Scroll to Top Logic
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      if (scrollTopBtn) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("visible");
+          } else {
+            scrollTopBtn.classList.remove("visible");
+          }
+        });
+        scrollTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+
+      function closeInstaModal() {
+        const lightbox = document.getElementById("instaLightbox");
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    </script>
+  </body>
+</html>
