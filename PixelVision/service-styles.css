@@ -1,0 +1,394 @@
+/* service-styles.css */
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.service-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.service-hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.corner-brackets {
+  position: absolute;
+  inset: 40px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bracket {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.bracket.tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.bracket.tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.bracket.bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.bracket.br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.hero-bottom-info {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  right: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+/* Service Description Text */
+.service-description {
+  padding: 80px 5vw 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-description p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .service-description {
+    padding: 60px 5vw 20px;
+  }
+  .service-description p {
+    font-size: 1rem;
+  }
+}
+
+/* Albums Scroll */
+.service-albums {
+  position: relative;
+  padding: 100px 0 120px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(8rem, 20vw, 25rem);
+  font-family: "DM Sans", sans-serif;
+  color: #ff5500;
+  opacity: 0.15;
+  filter: blur(4px);
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.albums-scroll {
+  display: flex;
+  gap: 60px;
+  padding: 0 5vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  z-index: 2;
+  width: 100%;
+  scrollbar-width: none;
+}
+.albums-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.album-card {
+  flex: 0 0 32vw;
+  min-width: 250px;
+  max-width: 450px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.album-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.album-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.album-card:hover .album-img-wrap img {
+  transform: scale(1.05);
+}
+
+.album-card .title-row h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+/* Custom Cursor */
+.cursor-view {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-view.active {
+  opacity: 1;
+}
+
+.cursor-view span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+}
+.cursor-view span:nth-child(1) {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.cursor-view span:nth-child(2) {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.cursor-view span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.cursor-view span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.cursor-text {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* Insta Section */
+.service-insta {
+  padding: 100px 60px;
+  background: #050505;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.insta-post {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.insta-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.insta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.insta-post:hover img {
+  transform: scale(1.1);
+}
+.insta-post:hover .insta-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    padding: 20px;
+  }
+  .hero-bottom-info {
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+  }
+  .corner-brackets {
+    inset: 20px;
+  }
+  .service-insta {
+    padding: 60px 20px;
+  }
+  .albums-scroll {
+    gap: 20px;
+    padding: 0 5vw;
+  }
+  .album-card {
+    flex: 0 0 80vw;
+  }
+}
+
+/* Instagram Modal */
+.insta-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.insta-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 100001;
+}
+
+#lightboxImage {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  transform: scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.insta-lightbox.active #lightboxImage {
+  transform: scale(1);
+}
